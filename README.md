@@ -74,46 +74,77 @@ Para executar o projeto:
 4. Execute as células sequencialmente
 
 👉 Notebook completo:
-[LINK_DO_COLAB]
+[🔗 Acessar no Google Colab](RafaelGomesDeMacedo_RM566955_pbl_fase6.ipynb)
 
 ---
 
 ## 📈 Resultados
 
-Foram realizados dois treinamentos:
+Foram realizadas três abordagens diferentes:
 
-- 30 épocas
-- 60 épocas
+### 🔹 YOLO customizada
 
-### 🔹 Treino 30 épocas:
-- Precision: ~0.60
-- Recall: ~0.80
-- mAP@0.5: ~0.75
+Treinada com dataset próprio (garrafa e mouse):
 
-### 🔹 Treino 60 épocas:
-- Precision: ~0.73
-- Recall: ~0.80
-- mAP@0.5: ~0.85
+- 30 épocas:
+  - Precision: ~0.60
+  - Recall: ~0.80
+  - mAP@0.5: ~0.75
 
-Observa-se uma melhora consistente principalmente na precisão e no mAP, indicando maior capacidade do modelo em identificar corretamente os objetos.
+- 60 épocas:
+  - Precision: ~0.73
+  - Recall: ~0.80
+  - mAP@0.5: ~0.85
 
----
-
-## ⚠️ Limitações
-
-Foram observados alguns erros de classificação (falsos positivos), principalmente em objetos com características visuais semelhantes.
-
-Essas limitações estão relacionadas ao tamanho reduzido do dataset e à diversidade de cenários.
+👉 Houve melhora significativa com mais épocas.
 
 ---
 
-## ✅ Conclusão
+### 🔹 YOLO padrão
 
-O modelo YOLOv5 demonstrou bom desempenho na detecção dos objetos propostos, mesmo com um dataset relativamente pequeno.
+Modelo pré-treinado no COCO:
 
-O aumento do número de épocas contribuiu diretamente para a melhoria das métricas de desempenho, especialmente precisão e mAP.
+- Boa detecção de garrafas
+- Não reconhece mouse corretamente
+- Presença de falsos positivos (ex: cell phone, sports ball)
 
-Como próximos passos, seria interessante aumentar o dataset e incluir mais variações de cenário, iluminação e ângulo para melhorar a robustez do modelo.
+👉 Modelo rápido, porém pouco adaptado ao problema.
+
+---
+
+### 🔹 CNN treinada do zero
+
+Modelo de classificação:
+
+- Boa performance em treino
+- Oscilações na validação
+- Indícios de overfitting
+
+👉 Modelo limitado por dataset pequeno e ausência de detecção de objetos.
+
+---
+
+## ⚖️ Comparação entre abordagens
+
+| Critério                  | YOLO Customizada | YOLO Padrão | CNN |
+|--------------------------|-----------------|-------------|-----|
+| Facilidade de uso        | Média           | Alta        | Baixa |
+| Precisão                 | Alta            | Média       | Baixa |
+| Tempo de treinamento     | Médio           | Nenhum      | Baixo |
+| Tempo de inferência      | Muito rápido    | Muito rápido| Rápido |
+| Generalização            | Boa (domínio)   | Alta        | Baixa |
+
+---
+
+## 🏁 Conclusão
+
+A análise demonstrou que:
+
+- A **YOLO customizada** apresentou o melhor desempenho geral, sendo ideal para problemas específicos;
+- A **YOLO padrão** é eficiente e rápida, porém limitada a classes conhecidas;
+- A **CNN do zero** mostrou-se menos eficiente para detecção, sendo mais adequada para tarefas simples de classificação.
+
+👉 Portanto, a abordagem mais adequada para o problema proposto é a **YOLO customizada**, devido à sua maior precisão e capacidade de adaptação ao domínio.
 
 ---
 
