@@ -22,6 +22,12 @@ A solução foi desenvolvida no contexto da FarmTech Solutions, simulando um cen
 
 ---
 
+## 🤖 Sobre o YOLO
+
+O YOLO (You Only Look Once) é um modelo de detecção de objetos em tempo real que realiza a identificação e localização dos objetos em uma única passagem pela imagem, tornando-o extremamente rápido e eficiente.
+
+---
+
 ## 🧠 Objetivo
 
 Treinar um modelo capaz de identificar dois objetos distintos:
@@ -60,10 +66,15 @@ As imagens foram rotuladas utilizando a ferramenta Make Sense IA.
 
 ## 🚀 Execução do projeto
 
-O projeto foi desenvolvido em um notebook no Google Colab.
+Para executar o projeto:
 
-👉 Acesse o notebook completo aqui:
-[COLE AQUI O LINK DO SEU COLAB]
+1. Acesse o notebook no Google Colab
+2. Faça o upload do dataset no Google Drive
+3. Ajuste os caminhos no arquivo `data.yaml`
+4. Execute as células sequencialmente
+
+👉 Notebook completo:
+[LINK_DO_COLAB]
 
 ---
 
@@ -71,10 +82,20 @@ O projeto foi desenvolvido em um notebook no Google Colab.
 
 Foram realizados dois treinamentos:
 
-* 30 épocas
-* 60 épocas
+- 30 épocas
+- 60 épocas
 
-O modelo apresentou melhora significativa no desempenho com o aumento do número de épocas, com destaque para o aumento de precisão e mAP.
+### 🔹 Treino 30 épocas:
+- Precision: ~0.60
+- Recall: ~0.80
+- mAP@0.5: ~0.75
+
+### 🔹 Treino 60 épocas:
+- Precision: ~0.73
+- Recall: ~0.80
+- mAP@0.5: ~0.85
+
+Observa-se uma melhora consistente principalmente na precisão e no mAP, indicando maior capacidade do modelo em identificar corretamente os objetos.
 
 ---
 
@@ -83,6 +104,16 @@ O modelo apresentou melhora significativa no desempenho com o aumento do número
 Foram observados alguns erros de classificação (falsos positivos), principalmente em objetos com características visuais semelhantes.
 
 Essas limitações estão relacionadas ao tamanho reduzido do dataset e à diversidade de cenários.
+
+---
+
+## ✅ Conclusão
+
+O modelo YOLOv5 demonstrou bom desempenho na detecção dos objetos propostos, mesmo com um dataset relativamente pequeno.
+
+O aumento do número de épocas contribuiu diretamente para a melhoria das métricas de desempenho, especialmente precisão e mAP.
+
+Como próximos passos, seria interessante aumentar o dataset e incluir mais variações de cenário, iluminação e ângulo para melhorar a robustez do modelo.
 
 ---
 
