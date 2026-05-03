@@ -89,4 +89,4 @@ Essas limitações estão relacionadas ao tamanho reduzido do dataset e à diver
 ## 🎥 Demonstração
 
 👉 Vídeo demonstrando o funcionamento do projeto:
-[COLE AQUI O LINK DO YOUTUBE]
+[https://youtu.be/htn47Q5IYoU]
