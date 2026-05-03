@@ -1,0 +1,9 @@
+train: /content/drive/MyDrive/FIAP/Fase6/dataset/images/train
+val: /content/drive/MyDrive/FIAP/Fase6dataset/images/val
+test: /content/drive/MyDrive/FIAP/Fase6dataset/images/test
+
+nc: 2
+
+names:
+  0: garrafa
+  1: mouse
